@@ -1,0 +1,13 @@
+Users
+  username:string
+  password:string
+  has_many Posts
+  has_many comments through posts
+Posts
+  title:string [presence]
+  body:text
+  belongs_to user
+Comments
+  body:text
+  belongs_to user
+  belongs_to post
