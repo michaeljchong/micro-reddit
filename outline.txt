@@ -1,13 +1,13 @@
 Users
-  username:string
-  password:string
+  username:string [unique, presence, 4-12 chars, format]
+  password:string [presence, 6-20 chars, format]
   has_many Posts
   has_many comments through posts
 Posts
   title:string [presence]
   body:text
-  belongs_to user
+  belongs_to user [presence]
 Comments
   body:text
-  belongs_to user
-  belongs_to post
+  belongs_to user [presence]
+  belongs_to post [presence]
