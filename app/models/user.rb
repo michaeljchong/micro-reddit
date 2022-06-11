@@ -5,4 +5,6 @@ class User < ApplicationRecord
   validates :username, format: { with: /\w+/ }
   validates :password, length: { in: 6..20 }
   validates :password, format: { with: /\w+/ }
+
+  has_many :posts
 end
