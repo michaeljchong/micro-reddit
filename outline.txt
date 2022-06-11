@@ -4,7 +4,7 @@ Users
   has_many Posts
   has_many comments through posts
 Posts
-  title:string [presence]
+  title:string [presence, 1-150 chars, format]
   body:text
   belongs_to user [presence]
 Comments
