@@ -7,4 +7,5 @@ class User < ApplicationRecord
   validates :password, format: { with: /\w+/ }
 
   has_many :posts
+  has_many :comments, through: :posts
 end
