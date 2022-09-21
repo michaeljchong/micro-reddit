@@ -7,6 +7,7 @@ Posts
   title:string [presence, 1-150 chars]
   body:text
   belongs_to user
+  has_many comments
 Comments
   body:text [presence]
   belongs_to user
